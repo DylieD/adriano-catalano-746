@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Adriano Catalano #746 | The Italian Stallion</title>
+  <meta name="description" content="Adriano Catalano #746, The Italian Stallion. Free rider, 5x Inland Champion, KTM 300SX, backed by Dragon Energy. Ride the track." />
+  <meta property="og:title" content="Adriano Catalano #746 | The Italian Stallion" />
+  <meta property="og:description" content="Free rider. 5x Inland Champion. Ride the track to see how it all landed." />
+  <meta name="theme-color" content="#0d0d0d" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <canvas id="scene"></canvas>
+
+  <div id="loader"><div class="ld-num">#746</div><div class="ld-txt">WARMING UP THE KTM</div></div>
+
+  <header id="hud">
+    <div class="hud-brand">ADRIANO CATALANO <span>#746</span></div>
+    <div class="hud-right">
+      <div id="speed"><b>0</b> km/h</div>
+      <a id="igBtn" href="https://www.instagram.com/the_adrianoness746/" target="_blank" rel="noopener">INSTAGRAM</a>
+      <button id="mapBtn" type="button">MAP</button>
+      <button id="muteBtn" type="button">SOUND</button>
+      <button id="resetBtn" type="button">RESET</button>
+      <button id="classicBtn" type="button">CLASSIC SITE</button>
+    </div>
+  </header>
+
+  <div id="hint">
+    <div class="h-desk"><kbd>W</kbd> throttle <kbd>A</kbd><kbd>D</kbd> steer <kbd>S</kbd> brake</div>
+    <div class="h-desk"><kbd>SHIFT</kbd> wheelie <kbd>SPACE</kbd> whip <kbd>T</kbd> tune <kbd>M</kbd> map <kbd>R</kbd> reset</div>
+    <div class="h-desk">Stay on the lime dashes. Not everything out there is dirt.</div>
+    <div class="h-touch">TAP TO ROLL · WATCH FOR MINES</div>
+  </div>
+
+  <canvas id="mini" width="300" height="364"></canvas>
+  <div id="stats"><span id="live"></span><span id="airStat">BEST AIR 0.0s</span><span id="whipStat">WHIPS 0</span><span id="wheelStat">WHEELIE 0.0s</span><span id="mineStat">MINES 0 · CRASHES 0</span><button id="tuneBtn" type="button">TUNE: RACE</button></div>
+  <div id="bal" class="hidden"><i class="zone"></i><i class="needle"></i><span>BALANCE</span></div>
+  <div id="wp" class="hidden"><svg viewBox="0 0 40 40"><path d="M20 3 L34 34 L20 27 L6 34 Z" /></svg><div><b id="wpName"></b><span id="wpDist"></span></div></div>
+  <div id="map" class="hidden"><div class="mp-wrap"><div class="mp-head"><b>MAP</b><span>TAP A SPOT TO SET A WAYPOINT</span><button id="mapClose" type="button">CLOSE</button></div><div class="mp-body"><canvas id="mapC" width="560" height="680"></canvas><div id="mapList"></div></div></div></div>
+
+  <div id="pill" class="hidden"></div>
+
+  <div id="touch" class="hidden">
+    <div class="tcol">
+      <button data-k="left" type="button">◀</button>
+      <button data-k="right" type="button">▶</button>
+    </div>
+    <div class="tcol">
+      <button data-k="brake" type="button">BRAKE</button>
+      <button data-k="trick" type="button" class="trick">WHEELIE</button>
+      <button data-k="whip" type="button" class="whip">WHIP</button>
+    </div>
+  </div>
+
+  <div id="flash"></div>
+  <div id="classic" class="hidden"></div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
